@@ -48,8 +48,9 @@ $highlight: #f7882f;
 }
 
 .aboutMe {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  justify-content: center;
 
   .header {
     position: absolute;
@@ -60,6 +61,16 @@ $highlight: #f7882f;
     background-color: #f7882f;
     z-index: 10;
     left: 48%;
-    margin-top: -50px;
+    margin-top: -80px;
+    font-weight: bold;
+  }
+
+  .text {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    margin-top: -30px;
+    left: 20%;
   }
 }
