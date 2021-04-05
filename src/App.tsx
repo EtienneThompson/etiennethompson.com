@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.scss';
+import backgroundImage from "./assets/etienne_flowers.jpg";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <div className="toolbar">
+        <p className="name">Etienne Thompson</p>
+      </div>
+      <div className="banner">
+        <img className="bannerImage" src={backgroundImage} alt="Background" />
+        <p className="welcomeText">
+          <span style={{ fontSize: 24 }}>Hey There! I'm</span>
+          <br />
+          <span style={{ fontSize: 44 }}>Etienne Thompson</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="diagonalLine"></div>
+      </div>
+      <div className="aboutMe">
+        <div className="header">
+          <p>About Me</p>
+        </div>
+      </div>
     </div>
   );
 }
