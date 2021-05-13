@@ -53,6 +53,7 @@ $highlight: #f7882f;
   flex-direction: column;
   position: relative;
   margin-top: -200px;
+  padding-bottom: 20px;
 
   .header {
     display: flex;
@@ -63,7 +64,7 @@ $highlight: #f7882f;
 
     .header-text {
       width: 100px;
-      background-color: #f7882f;
+      background-color: $highlight;
       height: 50px;
       text-align: center;
       font-weight: bold;
@@ -82,4 +83,42 @@ $highlight: #f7882f;
       text-align: center;
     }
   }
+}
+
+.art {
+  display: flex;
+  flex-direction: column;
+  background-color: $base;
+  height: auto;
+  // padding-bottom: 20px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    .header-text {
+      width: 100px;
+      background-color: $highlight;
+      height: 50px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.image {
+  width: 40%;
+  padding: 20px;
+  height: 100%;
 }

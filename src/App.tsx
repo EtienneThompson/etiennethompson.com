@@ -1,4 +1,8 @@
 import backgroundImage from "./assets/etienne_flowers.jpg";
+import colored_tiger from "./assets/colored_tiger.jpg";
+import pencil_owl from "./assets/pencil_owl.jpg";
+import colored_lion_1 from "./assets/colored_lion_1.jpg";
+import colored_horse from "./assets/colored_horse.jpg";
 import "./App.scss";
 
 function App() {
@@ -37,6 +41,31 @@ function App() {
             I'm a self taught artist who likes colored pencil and normal pencil
             medium drawings. You can check out my artwork below.
           </p>
+        </div>
+      </div>
+      <div className="art">
+        <div className="header">
+          <p className="header-text">Art</p>
+        </div>
+        <div className="row">
+          <img
+            className="image"
+            src={colored_tiger}
+            alt="Colored Pencil Tiger"
+          />
+          <img className="image" src={pencil_owl} alt="Pencil Owl" />
+        </div>
+        <div className="row">
+          <img
+            className="image"
+            src={colored_lion_1}
+            alt="Colored Pencil Lion"
+          />
+          <img
+            className="image"
+            src={colored_horse}
+            alt="Colored Pencil Horse"
+          />
         </div>
       </div>
     </div>
