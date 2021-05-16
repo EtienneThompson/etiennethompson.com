@@ -3,9 +3,22 @@ import colored_tiger from "./assets/colored_tiger.jpg";
 import pencil_owl from "./assets/pencil_owl.jpg";
 import colored_lion_1 from "./assets/colored_lion_1.jpg";
 import colored_horse from "./assets/colored_horse.jpg";
+import vivianethompson from "./assets/vivianethompson.png";
+import disney_bingo from "./assets/disney_bingo.png";
 import "./App.scss";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    document.title = "Etienne Thompson";
+    setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
+  }, []);
+
   return (
     <div className="App">
       <div className="toolbar">
@@ -13,19 +26,29 @@ function App() {
       </div>
       <div className="banner">
         <img className="bannerImage" src={backgroundImage} alt="Background" />
-        <p className="welcomeText">
-          <span style={{ fontSize: 24 }}>Hey There! I'm</span>
-          <br />
-          <span style={{ fontSize: 44 }}>Etienne Thompson</span>
-        </p>
-        <div className="diagonalLine"></div>
+        {windowWidth > 500 ? (
+          <p className="welcomeText">
+            <span style={{ fontSize: 24 }}>Hey There! I'm</span>
+            <br />
+            <span style={{ fontSize: 44 }}>Etienne Thompson</span>
+          </p>
+        ) : (
+          <p></p>
+        )}
       </div>
+      <div className="diagonalLine"></div>
       <div className="aboutMe">
         <div className="header">
           <p className="header-text">About Me</p>
         </div>
         <div className="description">
-          <p className="description-text">
+          <p
+            className={
+              "" +
+              (windowWidth > 900 ? "description-text" : "mobile-text") +
+              ""
+            }
+          >
             I'm a current Junior studying Computer Science and Chinese at the
             University of Arizona. I'm interested currently in web development
             and learning the full stack. I've worked mostly on some front end
@@ -48,25 +71,147 @@ function App() {
           <p className="header-text">Art</p>
         </div>
         <div className="row">
-          <img
-            className="image"
-            src={colored_tiger}
-            alt="Colored Pencil Tiger"
-          />
-          <img className="image" src={pencil_owl} alt="Pencil Owl" />
+          <div className="column">
+            <img
+              className="image"
+              src={colored_tiger}
+              alt="Colored Pencil Tiger"
+            />
+          </div>
+          <div className="column">
+            <img className="image" src={pencil_owl} alt="Pencil Owl" />
+          </div>
         </div>
         <div className="row">
-          <img
-            className="image"
-            src={colored_lion_1}
-            alt="Colored Pencil Lion"
-          />
-          <img
-            className="image"
-            src={colored_horse}
-            alt="Colored Pencil Horse"
-          />
+          <div className="column">
+            <img
+              className="image"
+              src={colored_lion_1}
+              alt="Colored Pencil Lion"
+            />
+          </div>
+          <div className="column">
+            <img
+              className="image"
+              src={colored_horse}
+              alt="Colored Pencil Horse"
+            />
+          </div>
         </div>
+      </div>
+      <div className="programming">
+        <div className="header">
+          <p className="header-text">Programming Projects</p>
+        </div>
+        <div className="row">
+          <div className="container">
+            <a
+              className="nav-card"
+              href="https://vivianethompson.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {windowWidth > 900 ? (
+                <div className="row">
+                  <div className="column">
+                    <p className="card-title">vivianethompson.com</p>
+                    <p className="description-text">
+                      This is my mom's business website I re-made for her over
+                      a summer. This was done using Vue.js and using her old
+                      website design, just modernizing the look. You can view
+                      more at the actual site. Just click this card!
+                    </p>
+                  </div>
+                  <div className="column">
+                    <img
+                      src={vivianethompson}
+                      alt="vivianethompson.com Home Page"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <div className="row">
+                    <div className="mobile-column">
+                      <img
+                        className="mobile-image"
+                        src={vivianethompson}
+                        alt="vivianethompson.com Home Page"
+                      />
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="mobile-column">
+                      <p className="card-title">vivianethompson.com</p>
+                      <p className="description-text">
+                        This is my mom's business website I re-made for her
+                        over a summer. This was done using Vue.js and using her
+                        old website design, just modernizing the look. You can
+                        view more at the actual site. Just click this card!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </a>
+            <div className="nav-card">
+              {windowWidth > 900 ? (
+                <div className="row">
+                  <div className="column">
+                    <img src={disney_bingo} alt="Disney Bingo Website" />
+                  </div>
+                  <div className="column">
+                    <p className="card-title">
+                      University of Arizona Disney Club Bingo
+                    </p>
+                    <p className="description-text">
+                      This was a small project I made for my university's
+                      Disney Club. It was a Halloween Bingo game. They way it
+                      worked was students needed to log in to view their own
+                      individual bingo board. When they completed a square they
+                      could upload a photo as proof of completion. At the time
+                      I hosted the front end on my personal website, the back
+                      end on Heroku, and used AWS S3 for file storage. A demo
+                      version will come soon.
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <div className="row">
+                    <div className="mobile-column">
+                      <img
+                        className="mobile-image"
+                        src={disney_bingo}
+                        alt="Disney Bingo Website"
+                      />
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="mobile-column">
+                      <p className="card-title">
+                        University of Arizona Disney Club Bingo
+                      </p>
+                      <p className="description-text">
+                        This was a small project I made for my university's
+                        Disney Club. It was a Halloween Bingo game. They way it
+                        worked was students needed to log in to view their own
+                        individual bingo board. When they completed a square
+                        they could upload a photo as proof of completion. At
+                        the time I hosted the front end on my personal website,
+                        the back end on Heroku, and used AWS S3 for file
+                        storage. A demo version will come soon.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="toolbar">
+        <p className="name">Etienne Thompson</p>
       </div>
     </div>
   );
