@@ -12,17 +12,27 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    // Set it so the page knows the window size.
     document.title = "Etienne Thompson";
     setWindowWidth(window.innerWidth);
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
+    setTheme("theme-light");
   }, []);
+
+  function setTheme(newTheme: string) {
+    document.documentElement.className = newTheme;
+  }
 
   return (
     <div className="App">
       <div className="toolbar">
         <p className="name">Etienne Thompson</p>
+        <label className="toggle">
+          <input type="checkbox" />
+          <span className="slider"></span>
+        </label>
       </div>
       <div className="banner">
         <img className="bannerImage" src={backgroundImage} alt="Background" />
@@ -210,7 +220,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="toolbar">
+      <div className="footer">
         <p className="name">Etienne Thompson</p>
       </div>
     </div>
