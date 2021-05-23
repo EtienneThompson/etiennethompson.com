@@ -6,7 +6,7 @@ import colored_horse from "./assets/colored_horse.jpg";
 import vivianethompson from "./assets/vivianethompson.png";
 import disney_bingo from "./assets/disney_bingo.png";
 import "./App.scss";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -18,21 +18,31 @@ function App() {
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
-    setTheme("theme-light");
+    document.documentElement.className = "theme-light";
   }, []);
 
-  function setTheme(newTheme: string) {
-    document.documentElement.className = newTheme;
+  function toggleTheme() {
+    document.documentElement.className =
+      document.documentElement.className === "theme-light"
+        ? "theme-dark"
+        : "theme-light";
   }
 
   return (
     <div className="App">
       <div className="toolbar">
         <p className="name">Etienne Thompson</p>
+
         <label className="toggle">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onChange={() => {
+              toggleTheme();
+            }}
+          />
           <span className="slider"></span>
         </label>
+        <p className="toggle-label">Theme: </p>
       </div>
       <div className="banner">
         <img className="bannerImage" src={backgroundImage} alt="Background" />
