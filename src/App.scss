@@ -6,9 +6,9 @@
 }
 
 .theme-dark {
-  --base: black;
-  --primary: #121212;
-  --highlight: #6b7a8f;
+  --base: #121212;
+  --primary: #232323;
+  --secondary: #6b7a8f;
   --invert: white;
 }
 
@@ -78,7 +78,7 @@
       content: "";
       height: 24px;
       width: 24px;
-      left: 3px;
+      left: 5px;
       top: 3px;
       background-color: white;
       -webkit-transition: 0.3s;
@@ -86,11 +86,11 @@
     }
 
     input:checked + .slider {
-      background-color: var(--highlight);
+      background-color: var(--secondary);
     }
 
     input:focus + .slider {
-      box-shadow: 0 0 1px var(--highlight);
+      box-shadow: 0 0 1px var(--secondary);
     }
 
     input:checked + .slider:before {
@@ -113,7 +113,7 @@
     padding-left: 10px;
     padding-right: 10px;
     width: auto;
-    background-color: var(--highlight);
+    background-color: var(--secondary);
     height: 50px;
     text-align: center;
     font-weight: bold;
@@ -274,6 +274,8 @@
   .name {
     padding-left: 75px;
     margin-top: 5px;
+    margin-bottom: 0px;
     font-size: 30px;
+    color: var(--invert);
   }
 }
