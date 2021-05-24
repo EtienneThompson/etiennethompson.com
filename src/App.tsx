@@ -32,7 +32,9 @@ function App() {
     <div className="App">
       {/*Toolbar section.*/}
       <div className="toolbar">
-        <p className="name">Etienne Thompson</p>
+        <p className={"" + (windowWidth > 550 ? "name" : "mobile-name") + ""}>
+          Etienne Thompson
+        </p>
         <label className="toggle">
           <input
             type="checkbox"
