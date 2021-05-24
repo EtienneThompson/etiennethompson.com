@@ -6,7 +6,7 @@ import colored_horse from "./assets/colored_horse.jpg";
 import vivianethompson from "./assets/vivianethompson.png";
 import disney_bingo from "./assets/disney_bingo.png";
 import "./App.scss";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -30,9 +30,9 @@ function App() {
 
   return (
     <div className="App">
+      {/*Toolbar section.*/}
       <div className="toolbar">
         <p className="name">Etienne Thompson</p>
-
         <label className="toggle">
           <input
             type="checkbox"
@@ -44,6 +44,7 @@ function App() {
         </label>
         <p className="toggle-label">Theme: </p>
       </div>
+      {/*Banner image section.*/}
       <div className="banner">
         <img className="bannerImage" src={backgroundImage} alt="Background" />
         {windowWidth > 500 ? (
@@ -56,12 +57,15 @@ function App() {
           <p></p>
         )}
       </div>
+      {/*Diagonal line across banner image.*/}
       <div className="diagonalLine"></div>
+      {/*About me section*/}
       <div className="aboutMe">
         <div className="header">
           <p className="header-text">About Me</p>
         </div>
         <div className="description">
+          {/*Change this section's className based on window height.*/}
           <p
             className={
               "" +
@@ -86,6 +90,7 @@ function App() {
           </p>
         </div>
       </div>
+      {/*Art section.*/}
       <div className="art">
         <div className="header">
           <p className="header-text">Art</p>
@@ -119,6 +124,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/*Programming section*/}
       <div className="programming">
         <div className="header">
           <p className="header-text">Programming Projects</p>
@@ -131,6 +137,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
+              {/*Change render based on window width.*/}
               {windowWidth > 900 ? (
                 <div className="row">
                   <div className="column">
@@ -144,6 +151,7 @@ function App() {
                   </div>
                   <div className="column">
                     <img
+                      className="card-image"
                       src={vivianethompson}
                       alt="vivianethompson.com Home Page"
                     />
@@ -175,10 +183,15 @@ function App() {
               )}
             </a>
             <div className="nav-card">
+              {/*Change render based on window width.*/}
               {windowWidth > 900 ? (
                 <div className="row">
                   <div className="column">
-                    <img src={disney_bingo} alt="Disney Bingo Website" />
+                    <img
+                      className="card-image"
+                      src={disney_bingo}
+                      alt="Disney Bingo Website"
+                    />
                   </div>
                   <div className="column">
                     <p className="card-title">
@@ -230,6 +243,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/*Footer section*/}
       <div className="footer">
         <p className="name">Etienne Thompson</p>
       </div>
