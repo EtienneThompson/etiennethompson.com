@@ -12,18 +12,41 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    // Set it so the page knows the window size.
     document.title = "Etienne Thompson";
     setWindowWidth(window.innerWidth);
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
+    document.documentElement.className = "theme-light";
   }, []);
+
+  function toggleTheme() {
+    document.documentElement.className =
+      document.documentElement.className === "theme-light"
+        ? "theme-dark"
+        : "theme-light";
+  }
 
   return (
     <div className="App">
+      {/*Toolbar section.*/}
       <div className="toolbar">
-        <p className="name">Etienne Thompson</p>
+        <p className={"" + (windowWidth > 550 ? "name" : "mobile-name") + ""}>
+          Etienne Thompson
+        </p>
+        <label className="toggle">
+          <input
+            type="checkbox"
+            onChange={() => {
+              toggleTheme();
+            }}
+          />
+          <span className="slider"></span>
+        </label>
+        <p className="toggle-label">Theme: </p>
       </div>
+      {/*Banner image section.*/}
       <div className="banner">
         <img className="bannerImage" src={backgroundImage} alt="Background" />
         {windowWidth > 500 ? (
@@ -36,12 +59,15 @@ function App() {
           <p></p>
         )}
       </div>
+      {/*Diagonal line across banner image.*/}
       <div className="diagonalLine"></div>
+      {/*About me section*/}
       <div className="aboutMe">
         <div className="header">
           <p className="header-text">About Me</p>
         </div>
         <div className="description">
+          {/*Change this section's className based on window height.*/}
           <p
             className={
               "" +
@@ -66,6 +92,7 @@ function App() {
           </p>
         </div>
       </div>
+      {/*Art section.*/}
       <div className="art">
         <div className="header">
           <p className="header-text">Art</p>
@@ -99,6 +126,7 @@ function App() {
           </div>
         </div>
       </div>
+      {/*Programming section*/}
       <div className="programming">
         <div className="header">
           <p className="header-text">Programming Projects</p>
@@ -111,6 +139,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
+              {/*Change render based on window width.*/}
               {windowWidth > 900 ? (
                 <div className="row">
                   <div className="column">
@@ -124,6 +153,7 @@ function App() {
                   </div>
                   <div className="column">
                     <img
+                      className="card-image"
                       src={vivianethompson}
                       alt="vivianethompson.com Home Page"
                     />
@@ -155,10 +185,15 @@ function App() {
               )}
             </a>
             <div className="nav-card">
+              {/*Change render based on window width.*/}
               {windowWidth > 900 ? (
                 <div className="row">
                   <div className="column">
-                    <img src={disney_bingo} alt="Disney Bingo Website" />
+                    <img
+                      className="card-image"
+                      src={disney_bingo}
+                      alt="Disney Bingo Website"
+                    />
                   </div>
                   <div className="column">
                     <p className="card-title">
@@ -210,7 +245,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="toolbar">
+      {/*Footer section*/}
+      <div className="footer">
         <p className="name">Etienne Thompson</p>
       </div>
     </div>
