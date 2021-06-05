@@ -1,0 +1,15 @@
+@import "../../../assets/styles/colors.scss";
+
+.footer-container {
+  background-color: var(--primary);
+  height: 50px;
+  width: 100%;
+
+  .name {
+    padding-left: 75px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    color: var(--invert);
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../assets/styles/colors.scss";
+
+/*
+ * About me section.
+ */
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: -200px;
+  padding-bottom: 20px;
+  background-color: var(--base);
+
+  .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    .description-text {
+      width: 60%;
+      text-align: center;
+      color: var(--invert);
+    }
+
+    .mobile-text {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      color: var(--invert);
+    }
+  }
+}

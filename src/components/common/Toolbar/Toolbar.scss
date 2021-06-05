@@ -1,0 +1,33 @@
+@import "../../../assets/styles/colors.scss";
+
+.toolbar-container {
+  position: fixed;
+  z-index: 10;
+  background-color: var(--primary);
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+
+  .name {
+    position: relative;
+    padding-left: 75px;
+    margin-top: 7px;
+    font-size: 30px;
+    float: left;
+    color: var(--invert);
+  }
+
+  .mobile-name {
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    color: var(--invert);
+    float: left;
+  }
+
+  .toggle-label {
+    float: right;
+    padding-right: 10px;
+    color: var(--invert);
+  }
+}
