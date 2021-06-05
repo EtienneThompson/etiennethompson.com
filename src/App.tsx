@@ -25,14 +25,9 @@ function App() {
     document.documentElement.className = "theme-light";
 
     // Send visit notice to api.
-    visitsApi
-      .post("/api/httpexample")
-      .then((response) => {
-        console.log("worked?");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    visitsApi.post("/api/httpexample").catch((error) => {
+      console.log(error);
+    });
   }, []);
 
   function toggleTheme() {
