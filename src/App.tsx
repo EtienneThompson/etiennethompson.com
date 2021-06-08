@@ -8,17 +8,26 @@ import disney_bingo from "./assets/disney_bingo.png";
 import "./App.scss";
 import { useEffect, useState } from "react";
 
+import visitsApi from "./api";
+
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     // Set it so the page knows the window size.
-    document.title = "Etienne Thompson";
     setWindowWidth(window.innerWidth);
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
+
+    // Set document title and theme.
+    document.title = "Etienne Thompson";
     document.documentElement.className = "theme-light";
+
+    // Send visit notice to api.
+    visitsApi.post("/api/httpexample").catch((error) => {
+      console.log(error);
+    });
   }, []);
 
   function toggleTheme() {
