@@ -36,37 +36,19 @@
     padding: 10px;
   }
 
-  /*
-     * Cards used to display each programming project.
-     */
-  .nav-card {
-    border: 1px solid var(--invert);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: var(--invert);
-    height: auto;
-    width: auto;
-
-    .card-title {
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .description-text {
-      text-align: center;
-      font-size: 20px;
-    }
-
-    .card-image {
-      border-radius: 2%;
-    }
-
-    .mobile-image {
-      width: 100%;
-      height: auto;
-      border-radius: 2%;
-    }
+  .description-text {
+    text-align: center;
+    font-size: 20px;
   }
+
+  .card-image {
+    border-radius: 2%;
+  }
+
+  .mobile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+  }
+  // }
 }

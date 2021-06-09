@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SectionHeader } from "../common/SectionHeader";
+import { Card, CardTitle, CardContent } from "../common/Card";
 import "./ProgrammingProjects.scss";
 
 import vivianethompson from "../../assets/images/vivianethompson.png";
@@ -19,23 +20,18 @@ export const ProgrammingProjects = () => {
       <SectionHeader>Programming Projects</SectionHeader>
       <div className="row">
         <div className="container">
-          <a
-            className="nav-card"
-            href="https://vivianethompson.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Card>
             {/*Change render based on window width.*/}
             {windowWidth > 900 ? (
               <div className="row">
                 <div className="column">
-                  <p className="card-title">vivianethompson.com</p>
-                  <p className="description-text">
+                  <CardTitle align="center">vivianethompson.com</CardTitle>
+                  <CardContent align="center">
                     This is my mom's business website I re-made for her over a
                     summer. This was done using Vue.js and using her old
                     website design, just modernizing the look. You can view
                     more at the actual site. Just click this card!
-                  </p>
+                  </CardContent>
                 </div>
                 <div className="column">
                   <img
@@ -58,19 +54,19 @@ export const ProgrammingProjects = () => {
                 </div>
                 <div className="row">
                   <div className="mobile-column">
-                    <p className="card-title">vivianethompson.com</p>
-                    <p className="description-text">
+                    <CardTitle align="center">vivianethompson.com</CardTitle>
+                    <CardContent align="center">
                       This is my mom's business website I re-made for her over
                       a summer. This was done using Vue.js and using her old
                       website design, just modernizing the look. You can view
                       more at the actual site. Just click this card!
-                    </p>
+                    </CardContent>
                   </div>
                 </div>
               </div>
             )}
-          </a>
-          <div className="nav-card">
+          </Card>
+          <Card>
             {/*Change render based on window width.*/}
             {windowWidth > 900 ? (
               <div className="row">
@@ -82,10 +78,10 @@ export const ProgrammingProjects = () => {
                   />
                 </div>
                 <div className="column">
-                  <p className="card-title">
+                  <CardTitle align="center">
                     University of Arizona Disney Club Bingo
-                  </p>
-                  <p className="description-text">
+                  </CardTitle>
+                  <CardContent align="center">
                     This was a small project I made for my university's Disney
                     Club. It was a Halloween Bingo game. They way it worked was
                     students needed to log in to view their own individual
@@ -94,7 +90,7 @@ export const ProgrammingProjects = () => {
                     front end on my personal website, the back end on Heroku,
                     and used AWS S3 for file storage. A demo version will come
                     soon.
-                  </p>
+                  </CardContent>
                 </div>
               </div>
             ) : (
@@ -110,10 +106,10 @@ export const ProgrammingProjects = () => {
                 </div>
                 <div className="row">
                   <div className="mobile-column">
-                    <p className="card-title">
+                    <CardTitle align="center">
                       University of Arizona Disney Club Bingo
-                    </p>
-                    <p className="description-text">
+                    </CardTitle>
+                    <CardContent align="center">
                       This was a small project I made for my university's
                       Disney Club. It was a Halloween Bingo game. They way it
                       worked was students needed to log in to view their own
@@ -122,12 +118,12 @@ export const ProgrammingProjects = () => {
                       I hosted the front end on my personal website, the back
                       end on Heroku, and used AWS S3 for file storage. A demo
                       version will come soon.
-                    </p>
+                    </CardContent>
                   </div>
                 </div>
               </div>
             )}
-          </div>
+          </Card>
         </div>
       </div>
     </div>
