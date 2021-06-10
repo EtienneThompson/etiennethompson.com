@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { SectionHeader } from "../common/SectionHeader";
 import { Card, CardTitle, CardContent } from "../common/Card";
+import { Row, Col } from "../common/Grid";
 import "./ProgrammingProjects.scss";
 
 import vivianethompson from "../../assets/images/vivianethompson.png";
@@ -18,13 +19,13 @@ export const ProgrammingProjects = () => {
   return (
     <div className="programming">
       <SectionHeader>Programming Projects</SectionHeader>
-      <div className="row">
+      <Row justify="center">
         <div className="container">
           <Card>
             {/*Change render based on window width.*/}
             {windowWidth > 900 ? (
-              <div className="row">
-                <div className="column">
+              <Row justify="center">
+                <Col cols="2">
                   <CardTitle align="center">vivianethompson.com</CardTitle>
                   <CardContent align="center">
                     This is my mom's business website I re-made for her over a
@@ -32,28 +33,28 @@ export const ProgrammingProjects = () => {
                     website design, just modernizing the look. You can view
                     more at the actual site. Just click this card!
                   </CardContent>
-                </div>
-                <div className="column">
+                </Col>
+                <Col cols="2">
                   <img
                     className="card-image"
                     src={vivianethompson}
                     alt="vivianethompson.com Home Page"
                   />
-                </div>
-              </div>
+                </Col>
+              </Row>
             ) : (
               <div>
-                <div className="row">
-                  <div className="mobile-column">
+                <Row justify="center">
+                  <Col cols="1">
                     <img
                       className="mobile-image"
                       src={vivianethompson}
                       alt="vivianethompson.com Home Page"
                     />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="mobile-column">
+                  </Col>
+                </Row>
+                <Row justify="center">
+                  <Col cols="1">
                     <CardTitle align="center">vivianethompson.com</CardTitle>
                     <CardContent align="center">
                       This is my mom's business website I re-made for her over
@@ -61,23 +62,23 @@ export const ProgrammingProjects = () => {
                       website design, just modernizing the look. You can view
                       more at the actual site. Just click this card!
                     </CardContent>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
             )}
           </Card>
           <Card>
             {/*Change render based on window width.*/}
             {windowWidth > 900 ? (
-              <div className="row">
-                <div className="column">
+              <Row justify="center">
+                <Col cols="2">
                   <img
                     className="card-image"
                     src={disney_bingo}
                     alt="Disney Bingo Website"
                   />
-                </div>
-                <div className="column">
+                </Col>
+                <Col cols="2">
                   <CardTitle align="center">
                     University of Arizona Disney Club Bingo
                   </CardTitle>
@@ -91,21 +92,21 @@ export const ProgrammingProjects = () => {
                     and used AWS S3 for file storage. A demo version will come
                     soon.
                   </CardContent>
-                </div>
-              </div>
+                </Col>
+              </Row>
             ) : (
               <div>
-                <div className="row">
-                  <div className="mobile-column">
+                <Row justify="center">
+                  <Col cols="1">
                     <img
                       className="mobile-image"
                       src={disney_bingo}
                       alt="Disney Bingo Website"
                     />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="mobile-column">
+                  </Col>
+                </Row>
+                <Row justify="center">
+                  <Col cols="1">
                     <CardTitle align="center">
                       University of Arizona Disney Club Bingo
                     </CardTitle>
@@ -119,13 +120,13 @@ export const ProgrammingProjects = () => {
                       end on Heroku, and used AWS S3 for file storage. A demo
                       version will come soon.
                     </CardContent>
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               </div>
             )}
           </Card>
         </div>
-      </div>
+      </Row>
     </div>
   );
 };

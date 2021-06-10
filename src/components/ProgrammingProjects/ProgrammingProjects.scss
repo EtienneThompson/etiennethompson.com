@@ -14,27 +14,13 @@
     max-width: 80%;
   }
 
-  .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 50%;
-  }
-
-  .mobile-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%;
-    padding: 10px;
-  }
+  // .mobile-column {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   max-width: 100%;
+  //   padding: 10px;
+  // }
 
   .description-text {
     text-align: center;

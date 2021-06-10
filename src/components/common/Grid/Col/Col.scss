@@ -1,0 +1,28 @@
+@import "../../../../assets/styles/colors.scss";
+
+.col-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  &-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+  }
+
+  &-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 33%;
+  }
+}

@@ -7,6 +7,7 @@ import { AboutMe } from "./components/AboutMe";
 import { Banner } from "./components/Banner";
 import { Art } from "./components/Art";
 import { ProgrammingProjects } from "./components/ProgrammingProjects";
+// eslint-disable-next-line
 import visitsApi from "./api";
 
 function App() {
