@@ -1,5 +1,5 @@
-import "./App.scss";
 import { useEffect } from "react";
+import "./App.scss";
 
 import { Toolbar } from "./components/common/Toolbar";
 import { Footer } from "./components/common/Footer";
@@ -7,7 +7,7 @@ import { AboutMe } from "./components/AboutMe";
 import { Banner } from "./components/Banner";
 import { Art } from "./components/Art";
 import { ProgrammingProjects } from "./components/ProgrammingProjects";
-// eslint-disable-next-line
+
 import visitsApi from "./api";
 
 function App() {
@@ -16,10 +16,12 @@ function App() {
     document.title = "Etienne Thompson";
     document.documentElement.className = "theme-light";
 
-    // Send visit notice to api.
-    // visitsApi.post("/api/httpexample").catch((error) => {
-    //   console.log(error);
-    // });
+    // Send visit notice to api only in production.
+    if (process.env.NODE_ENV === "production") {
+      visitsApi.post("/api/httpexample").catch((error) => {
+        console.log(error);
+      });
+    }
   }, []);
 
   return (
