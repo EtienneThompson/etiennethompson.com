@@ -1,0 +1,20 @@
+/*
+ * Section headers text.
+ */
+.section-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  .header-text {
+    background-color: var(--secondary);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+}

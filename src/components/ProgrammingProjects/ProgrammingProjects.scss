@@ -1,0 +1,40 @@
+@import "../../assets/styles/colors.scss";
+
+/*
+ * Programming projects section.
+ */
+.programming {
+  height: auto;
+  background-color: var(--base);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+  }
+
+  // .mobile-column {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   max-width: 100%;
+  //   padding: 10px;
+  // }
+
+  .description-text {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .card-image {
+    border-radius: 2%;
+  }
+
+  .mobile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+  }
+  // }
+}
