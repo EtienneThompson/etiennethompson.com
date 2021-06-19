@@ -1,0 +1,12 @@
+@import "../../../assets/styles/animations.scss";
+
+.fade-in-section-container {
+  width: auto;
+  height: auto;
+  opacity: 1;
+}
+
+.fade-in-section-container.is-visible {
+  animation: fade-in-transition 1.5s;
+  -webkit-animation: fade-in-transition 1.5s;
+}

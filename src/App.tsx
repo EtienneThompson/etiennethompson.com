@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./App.scss";
+import "./assets/styles/animations.scss";
 
 import { Toolbar } from "./components/common/Toolbar";
 import { Footer } from "./components/common/Footer";
@@ -8,7 +9,7 @@ import { Banner } from "./components/Banner";
 import { Art } from "./components/Art";
 import { ProgrammingProjects } from "./components/ProgrammingProjects";
 
-import visitsApi from "./api";
+// import visitsApi from "./api";
 
 function App() {
   useEffect(() => {
@@ -17,11 +18,11 @@ function App() {
     document.documentElement.className = "theme-light";
 
     // Send visit notice to api only in production.
-    if (process.env.NODE_ENV === "production") {
-      visitsApi.post("/api/httpexample").catch((error) => {
-        console.log(error);
-      });
-    }
+    // if (process.env.NODE_ENV === "production") {
+    //   visitsApi.post("/api/httpexample").catch((error) => {
+    //     console.log(error);
+    //   });
+    // }
   }, []);
 
   return (
