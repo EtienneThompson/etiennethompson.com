@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { SectionHeader } from "../common/SectionHeader";
 import { Card, CardTitle, CardContent } from "../common/Card";
 import { Row, Col } from "../common/Grid";
+import { Button } from "../common/Button";
 import "./ProgrammingProjects.scss";
 
 import vivianethompson from "../../assets/images/vivianethompson.png";
@@ -16,6 +17,10 @@ export const ProgrammingProjects = () => {
     });
   }, []);
 
+  const onProgrammingProjectClicked = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="programming">
       <SectionHeader>Programming Projects</SectionHeader>
@@ -27,11 +32,25 @@ export const ProgrammingProjects = () => {
               <Row justify="center">
                 <Col cols="2">
                   <CardTitle align="center">vivianethompson.com</CardTitle>
+
                   <CardContent align="center">
-                    This is my mom's business website I re-made for her over a
-                    summer. This was done using Vue.js and using her old
-                    website design, just modernizing the look. You can view
-                    more at the actual site. Just click this card!
+                    <Row justify="center">
+                      This is my mom's business website I re-made for her over
+                      a summer. This was done using Vue.js and using her old
+                      website design, just modernizing the look. You can view
+                      more at the actual site.
+                    </Row>
+                    <Row justify="center">
+                      <Button
+                        onClick={() => {
+                          onProgrammingProjectClicked(
+                            "https://vivianethompson.com"
+                          );
+                        }}
+                      >
+                        Visit
+                      </Button>
+                    </Row>
                   </CardContent>
                 </Col>
                 <Col cols="2">
