@@ -81,9 +81,20 @@ export const ProgrammingProjects = () => {
                         This is my mom's business website I re-made for her
                         over a summer. This was done using Vue.js and using her
                         old website design, just modernizing the look. You can
-                        view more at the actual site. Just click this card!
+                        view more at the actual site.
                       </CardContent>
                     </Col>
+                  </Row>
+                  <Row justify="center">
+                    <Button
+                      onClick={() => {
+                        onProgrammingProjectClicked(
+                          "https://vivianethompson.com"
+                        );
+                      }}
+                    >
+                      Visit
+                    </Button>
                   </Row>
                 </div>
               )}
