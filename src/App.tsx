@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./App.scss";
-import "./assets/styles/animations.scss";
 
 import { Toolbar } from "./components/common/Toolbar";
 import { Footer } from "./components/common/Footer";
