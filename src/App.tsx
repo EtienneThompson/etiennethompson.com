@@ -26,17 +26,11 @@ function App() {
 
   return (
     <div className="App">
-      {/*Toolbar section.*/}
       <Toolbar />
-      {/*Banner image section.*/}
       <Banner />
-      {/*About me section*/}
       <AboutMe />
-      {/*Art section.*/}
       <Art />
-      {/*Programming section*/}
       <ProgrammingProjects />
-      {/*Footer section*/}
       <Footer />
     </div>
   );
