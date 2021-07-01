@@ -1,5 +1,6 @@
 import { SectionHeader } from "../common/SectionHeader";
 import { FadeInSection } from "../common/FadeInSection";
+import { Row, Col } from "../common/Grid";
 import "./Art.scss";
 
 import colored_tiger from "../../assets/images/colored_tiger.jpg";
@@ -12,34 +13,34 @@ export const Art = () => {
     <div className="art">
       <FadeInSection>
         <SectionHeader>Art</SectionHeader>
-        <div className="row">
-          <div className="column">
+        <Row justify="center">
+          <Col cols="2">
             <img
               className="image"
               src={colored_tiger}
               alt="Colored Pencil Tiger"
             />
-          </div>
-          <div className="column">
+          </Col>
+          <Col cols="2">
             <img className="image" src={pencil_owl} alt="Pencil Owl" />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column">
+          </Col>
+        </Row>
+        <Row justify="center">
+          <Col cols="2">
             <img
               className="image"
               src={colored_lion_1}
               alt="Colored Pencil Lion"
             />
-          </div>
-          <div className="column">
+          </Col>
+          <Col cols="2">
             <img
               className="image"
               src={colored_horse}
               alt="Colored Pencil Horse"
             />
-          </div>
-        </div>
+          </Col>
+        </Row>
       </FadeInSection>
     </div>
   );
