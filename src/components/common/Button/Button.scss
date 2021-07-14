@@ -8,5 +8,9 @@
   background-color: var(--secondary);
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0px 0px 2px 1px var(--box-shadow);
+  box-shadow: 1px 2px 3px 0px var(--box-shadow);
+}
+
+.button-container:active {
+  box-shadow: none;
 }
