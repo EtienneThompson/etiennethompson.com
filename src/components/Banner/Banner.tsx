@@ -19,7 +19,7 @@ export const Banner = () => {
           <img
             className="bannerImage"
             src={backgroundImage}
-            alt="Background"
+            alt="Etienne Thompson standing in front of the fountain outside Old Main at the univeristy of Arizona."
           />
           {windowWidth > 500 ? (
             <p className="welcomeText">

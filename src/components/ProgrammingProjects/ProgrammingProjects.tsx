@@ -59,7 +59,7 @@ export const ProgrammingProjects = () => {
                     <img
                       className="card-image"
                       src={vivianethompson}
-                      alt="vivianethompson.com Home Page"
+                      alt="vivianethompson.com Home Page, used as an example thumbnail for the project."
                       loading="lazy"
                     />
                   </Col>
@@ -71,7 +71,7 @@ export const ProgrammingProjects = () => {
                       <img
                         className="mobile-image"
                         src={vivianethompson}
-                        alt="vivianethompson.com Home Page"
+                        alt="vivianethompson.com Home Page, used as en example thumbnail for the project."
                         loading="lazy"
                       />
                     </Col>
@@ -109,7 +109,7 @@ export const ProgrammingProjects = () => {
                     <img
                       className="card-image"
                       src={disney_bingo}
-                      alt="Disney Bingo Website"
+                      alt="Disney Bingo Website. Shows the game board that players were using. Used as an example thumbnail for the project."
                       loading="lazy"
                     />
                   </Col>
@@ -136,7 +136,7 @@ export const ProgrammingProjects = () => {
                       <img
                         className="mobile-image"
                         src={disney_bingo}
-                        alt="Disney Bingo Website"
+                        alt="Disney Bingo Website. Shows the game board that players were using. Used as an example thumbnail for the project."
                         loading="lazy"
                       />
                     </Col>
