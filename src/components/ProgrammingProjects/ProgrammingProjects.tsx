@@ -60,6 +60,7 @@ export const ProgrammingProjects = () => {
                       className="card-image"
                       src={vivianethompson}
                       alt="vivianethompson.com Home Page"
+                      loading="lazy"
                     />
                   </Col>
                 </Row>
@@ -71,6 +72,7 @@ export const ProgrammingProjects = () => {
                         className="mobile-image"
                         src={vivianethompson}
                         alt="vivianethompson.com Home Page"
+                        loading="lazy"
                       />
                     </Col>
                   </Row>
@@ -108,6 +110,7 @@ export const ProgrammingProjects = () => {
                       className="card-image"
                       src={disney_bingo}
                       alt="Disney Bingo Website"
+                      loading="lazy"
                     />
                   </Col>
                   <Col cols="2">
@@ -134,6 +137,7 @@ export const ProgrammingProjects = () => {
                         className="mobile-image"
                         src={disney_bingo}
                         alt="Disney Bingo Website"
+                        loading="lazy"
                       />
                     </Col>
                   </Row>
