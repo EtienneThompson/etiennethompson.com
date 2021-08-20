@@ -15,10 +15,16 @@ export const DesktopArt = () => {
             className="desktop image"
             src={colored_tiger}
             alt="Colored Pencil Tiger"
+            loading="lazy"
           />
         </Col>
         <Col cols="2">
-          <img className="desktop image" src={pencil_owl} alt="Pencil Owl" />
+          <img
+            className="desktop image"
+            src={pencil_owl}
+            alt="Pencil Owl"
+            loading="lazy"
+          />
         </Col>
       </Row>
       <Row justify="center">
@@ -27,6 +33,7 @@ export const DesktopArt = () => {
             className="desktop image"
             src={colored_lion_1}
             alt="Colored Pencil Lion"
+            loading="lazy"
           />
         </Col>
         <Col cols="2">
@@ -34,6 +41,7 @@ export const DesktopArt = () => {
             className="desktop image"
             src={colored_horse}
             alt="Colored Pencil Horse"
+            loading="lazy"
           />
         </Col>
       </Row>
