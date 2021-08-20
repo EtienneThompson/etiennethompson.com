@@ -15,7 +15,7 @@ export const DesktopArt = () => {
           <img
             className="desktop image"
             src={colored_lion_2}
-            alt=""
+            alt="Colored pencil lion drawing. This lion is very bright and colorful, using a lot of colors in the yellow to red range. 9 by 12 paper. Completed August 7 2021."
             loading="lazy"
           />
         </Col>

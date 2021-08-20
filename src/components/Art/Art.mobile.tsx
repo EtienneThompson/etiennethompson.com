@@ -11,7 +11,12 @@ export const MobileArt = () => {
   return (
     <div>
       <Row justify="center">
-        <img className="image" src={colored_lion_2} alt="" loading="lazy" />
+        <img
+          className="image"
+          src={colored_lion_2}
+          alt="Colored pencil lion drawing. This lion is very bright and colorful, using a lot of colors in the yellow to red range. 9 by 12 paper. Completed August 7 2021."
+          loading="lazy"
+        />
       </Row>
       <Row justify="center">
         <img
