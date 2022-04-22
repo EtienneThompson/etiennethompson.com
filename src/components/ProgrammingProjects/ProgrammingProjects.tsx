@@ -118,14 +118,29 @@ export const ProgrammingProjects = () => {
                       University of Arizona Disney Club Bingo
                     </CardTitle>
                     <CardContent align="center">
-                      This was a small project I made for my university's
-                      Disney Club. It was a Halloween Bingo game. They way it
-                      worked was students needed to log in to view their own
-                      individual bingo board. When they completed a square they
-                      could upload a photo as proof of completion. At the time
-                      I hosted the front end on my personal website, the back
-                      end on Heroku, and used AWS S3 for file storage. A demo
-                      version will come soon.
+                      <Row justify="center">
+                        This was a small project I made for my university's
+                        Disney Club. It was a Halloween Bingo game. They way it
+                        worked was students needed to log in to view their own
+                        individual bingo board. When they completed a square
+                        they could upload a photo as proof of completion. At
+                        the time I hosted the front end on my personal website,
+                        the back end on Heroku, and used AWS S3 for file
+                        storage.
+                        <br className="mv-5" />A demo version is available! Use
+                        "demo" as the username and password when logging in.
+                      </Row>
+                      <Row justify="center">
+                        <Button
+                          onClick={() =>
+                            onProgrammingProjectClicked(
+                              "http://disney.bingo.etiennethompson.com"
+                            )
+                          }
+                        >
+                          Try it out!
+                        </Button>
+                      </Row>
                     </CardContent>
                   </Col>
                 </Row>
@@ -147,14 +162,30 @@ export const ProgrammingProjects = () => {
                         University of Arizona Disney Club Bingo
                       </CardTitle>
                       <CardContent align="center">
-                        This was a small project I made for my university's
-                        Disney Club. It was a Halloween Bingo game. They way it
-                        worked was students needed to log in to view their own
-                        individual bingo board. When they completed a square
-                        they could upload a photo as proof of completion. At
-                        the time I hosted the front end on my personal website,
-                        the back end on Heroku, and used AWS S3 for file
-                        storage. A demo version will come soon.
+                        <Row>
+                          This was a small project I made for my university's
+                          Disney Club. It was a Halloween Bingo game. They way
+                          it worked was students needed to log in to view their
+                          own individual bingo board. When they completed a
+                          square they could upload a photo as proof of
+                          completion. At the time I hosted the front end on my
+                          personal website, the back end on Heroku, and used
+                          AWS S3 for file storage.
+                          <br className="mv-5" />A demo version is available!
+                          Use "demo" as the username and password when logging
+                          in.
+                        </Row>
+                        <Row justify="center">
+                          <Button
+                            onClick={() =>
+                              onProgrammingProjectClicked(
+                                "http://disney.bingo.etiennethompson.com"
+                              )
+                            }
+                          >
+                            Try it out!
+                          </Button>
+                        </Row>
                       </CardContent>
                     </Col>
                   </Row>
