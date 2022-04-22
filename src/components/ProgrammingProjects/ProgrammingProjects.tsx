@@ -128,7 +128,7 @@ export const ProgrammingProjects = () => {
                         the back end on Heroku, and used AWS S3 for file
                         storage.
                         <br className="mv-5" />A demo version is available! Use
-                        "demo" as the username and password!
+                        "demo" as the username and password when logging in.
                       </Row>
                       <Row justify="center">
                         <Button
@@ -170,8 +170,10 @@ export const ProgrammingProjects = () => {
                           square they could upload a photo as proof of
                           completion. At the time I hosted the front end on my
                           personal website, the back end on Heroku, and used
-                          AWS S3 for file storage. A demo version is available!
-                          Use "demo" as the username and password!
+                          AWS S3 for file storage.
+                          <br className="mv-5" />A demo version is available!
+                          Use "demo" as the username and password when logging
+                          in.
                         </Row>
                         <Row justify="center">
                           <Button
