@@ -25,7 +25,7 @@ export const AboutMe = () => {
               ""
             }
           >
-            I'm a current Junior studying Computer Science and Chinese at the
+            I'm a current Senior studying Computer Science and Chinese at the
             University of Arizona. I'm interested currently in web development
             and learning the full stack. I've worked mostly on some front end
             projects, and want to delve deeper into back end frameworks and
