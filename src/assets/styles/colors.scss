@@ -3,16 +3,18 @@
  */
 .theme-light {
   --base: #ffffff;
-  --primary: #6b7a8f;
-  --secondary: #f7882f;
+  --primary-shadow: #2f4858;
+  --primary: #33658a;
+  --primary-accent: #86bbd8;
+  --secondary: #ee7b30;
   --invert: #000000;
   --box-shadow: rgba(0, 0, 0, 0.25);
 }
 
 .theme-dark {
-  --base: #121212;
-  --primary: #232323;
-  --secondary: #6b7a8f;
+  --base: #252525;
+  --secondary: #ee7b30;
+  --primary: #2f4858;
   --invert: #ffffff;
   --box-shadow: rgba(255, 255, 255, 0.25);
 }
