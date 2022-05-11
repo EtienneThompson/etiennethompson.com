@@ -13,7 +13,7 @@ import { ProgrammingProjects } from "./components/ProgrammingProjects";
 function App() {
   useEffect(() => {
     // Set the document title and theme.
-    document.title = "Etienne Thompson";
+    document.title = "Etienne Thompson - Portfolio";
     document.documentElement.className = "theme-light";
 
     // Send visit notice to api only in production.
