@@ -21,6 +21,7 @@
 
   .card-image {
     border-radius: 2%;
+    min-width: 400px;
     width: 100%;
     margin: 0px;
     padding: 0px
@@ -31,6 +32,14 @@
     height: auto;
     border-radius: 2%;
   }
+}
+
+.desktop-container {
+  flex-direction: row !important;
+}
+
+.mobile-container {
+  flex-direction: column !important;
 }
 
 .mv-5 {
