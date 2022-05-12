@@ -15,7 +15,11 @@ export const FadeInSection: FunctionComponent<FadeInSectionProps> = (
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setIsVisible(entry.isIntersecting));
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
     });
     if (domRef.current) {
       observer.observe(domRef.current);
