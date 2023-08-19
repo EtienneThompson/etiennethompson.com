@@ -1,3 +1,4 @@
+import React from "react";
 import { SectionHeader } from "../common/SectionHeader";
 import { FadeInSection } from "../common/FadeInSection";
 import { MobileArt, DesktopArt } from ".";

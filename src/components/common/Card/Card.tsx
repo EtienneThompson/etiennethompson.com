@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import { CardProps } from "./Card.types";
 import "./Card.scss";
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FadeInSection } from "../common/FadeInSection";
 import backgroundImage from "../../assets/images/etienne_flowers.jpg";
 import "./Banner.scss";
