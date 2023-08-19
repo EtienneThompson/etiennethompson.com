@@ -1,3 +1,4 @@
+import React from "react";
 import { Row } from "../common/Grid";
 import "./Art.scss";
 

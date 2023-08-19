@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SectionHeader } from "../common/SectionHeader";
 import { FadeInSection } from "../common/FadeInSection";
 import "./AboutMe.scss";
@@ -25,13 +25,11 @@ export const AboutMe = () => {
               ""
             }
           >
-            I'm a current Senior studying Computer Science and Chinese at the
-            University of Arizona. I'm interested currently in web development
-            and learning the full stack. I've worked mostly on some front end
-            projects, and want to delve deeper into back end frameworks and
-            design, and looking into different hosting service options like
-            serverless. You can check out a few of the projects I've worked on
-            down below.
+            I'm a software engineer curerntly working at Microsoft on Microsoft
+            Cashback. I graduated from the University of Arizona with a
+            Bachelor's in Computer Science and East Asian Studies focusing on
+            Chinese Language in May 2022. I'm also currently working on my
+            Master's in Artificial Intelligence from Penn State University.
             <br />
             <br /> In my free time I like to play trading card games. Right now
             I mainly play the Commander format of Magic: the Gathering, but

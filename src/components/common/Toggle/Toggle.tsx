@@ -1,4 +1,5 @@
 import "./Toggle.scss";
+import React from "react";
 import { ToggleProps } from "./Toggle.types";
 
 export const Toggle = (props: ToggleProps) => {

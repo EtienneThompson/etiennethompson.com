@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import { RowProps } from "./Row.types";
 import "./Row.scss";
 

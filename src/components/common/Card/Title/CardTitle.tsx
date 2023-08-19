@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import { CardTitleProps } from "./CardTitle.types";
 import "./CardTitle.scss";
 

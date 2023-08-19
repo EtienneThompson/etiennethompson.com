@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import { ButtonProps } from "./Button.types";
 import "./Button.scss";
 
