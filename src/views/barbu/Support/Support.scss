@@ -1,7 +1,26 @@
 .support-container {
-    padding: 10px;
+    padding: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .section-title {
     color: var(--secondary);
+}
+
+.left-form-column {
+    padding-right: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.right-form-column {
+    padding-left: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
