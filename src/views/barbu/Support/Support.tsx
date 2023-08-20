@@ -1,10 +1,25 @@
 import React from "react";
 import "./Support.scss";
 import { Col, Container, Row } from "components/common/Grid";
-import { TextInput } from "components/common/Form/TextInput/TextInput";
-import { TextArea } from "components/common/Form/TextArea/TextArea";
+import { TextInput } from "components/common/Form/TextInput";
+import { TextArea } from "components/common/Form/TextArea";
+import { Button } from "components/common/Button";
 
 export const Support = () => {
+  const [firstName, setFirstName] = React.useState("");
+  const [lastName, setLastName] = React.useState("");
+  const [emailAddress, setEmailAddress] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const onSubmitButtonClick = () => {
+    console.log(firstName);
+    console.log(lastName);
+    console.log(emailAddress);
+    console.log(subject);
+    console.log(message);
+  };
+
   return (
     <Container>
       <Row className="support-container" justify="center">
@@ -18,33 +33,36 @@ export const Support = () => {
             <Col cols="2" align="start">
               <div className="left-form-column">
                 <span className="text">First Name</span>
-                <TextInput />
+                <TextInput setter={(value: string) => setFirstName(value)} />
               </div>
             </Col>
             <Col cols="2" align="start">
               <div className="right-form-column">
                 <span className="text">Last Name</span>
-                <TextInput />
+                <TextInput setter={(value: string) => setLastName(value)} />
               </div>
             </Col>
           </Row>
           <Row>
             <Col align="start">
               <span className="text">Email</span>
-              <TextInput />
+              <TextInput setter={(value: string) => setEmailAddress(value)} />
             </Col>
           </Row>
           <Row>
             <Col align="start">
               <span className="text">Subject</span>
-              <TextInput />
+              <TextInput setter={(value: string) => setSubject(value)} />
             </Col>
           </Row>
           <Row>
             <Col align="start">
               <span className="text">Message</span>
-              <TextArea />
+              <TextArea setter={(value: string) => setMessage(value)} />
             </Col>
+          </Row>
+          <Row>
+            <Button onClick={onSubmitButtonClick}>Submit</Button>
           </Row>
         </Col>
       </Row>
