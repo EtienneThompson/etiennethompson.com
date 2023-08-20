@@ -116,10 +116,12 @@ export const Support = () => {
           </Row>
           <Row>
             {errorMessage && (
-              <div className="error-message">{errorMessage}</div>
+              <div className="text error-message">{errorMessage}</div>
             )}
             {emailSent && (
-              <div className="success-message">Request sent successfully</div>
+              <div className="text success-message">
+                Request sent successfully
+              </div>
             )}
           </Row>
         </Col>
