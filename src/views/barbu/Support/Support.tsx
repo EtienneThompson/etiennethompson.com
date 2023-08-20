@@ -5,7 +5,8 @@ import { TextInput } from "components/common/Form/TextInput";
 import { TextArea } from "components/common/Form/TextArea";
 import { Button } from "components/common/Button";
 import { EmailInput } from "components/common/Form/EmailInput";
-import { isValidEmail } from "utils";
+import { IsStringNullOrEmpty, isValidEmail } from "utils";
+import api from "../../../api";
 
 export const Support = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -14,16 +15,59 @@ export const Support = () => {
   const [subject, setSubject] = React.useState("");
   const [message, setMessage] = React.useState("");
 
+  const [errorMessage, setErrorMessage] = React.useState("");
+  const [emailSent, setEmailSent] = React.useState(false);
+
   const onSubmitButtonClick = () => {
-    console.log(firstName);
-    console.log(lastName);
-    console.log(emailAddress);
-    console.log(subject);
-    console.log(message);
+    if (emailSent) {
+      // Don't send multiple emails.
+      return;
+    }
+
+    if (IsStringNullOrEmpty(firstName)) {
+      setErrorMessage("Please provide a first name");
+      return;
+    }
+
+    if (IsStringNullOrEmpty(lastName)) {
+      setErrorMessage("Please provide a last name");
+      return;
+    }
 
     if (!isValidEmail(emailAddress)) {
-      console.log("invalid email provided!");
+      setErrorMessage("Your email is invalid.");
+      return;
     }
+
+    if (IsStringNullOrEmpty(subject)) {
+      setErrorMessage("Please provide a subject");
+      return;
+    }
+
+    if (IsStringNullOrEmpty(message)) {
+      setErrorMessage("Please provide a message");
+      return;
+    }
+
+    api
+      .post("/etiennethompson/support", {
+        app: "Barbu Card Game",
+        firstName,
+        lastName,
+        email: emailAddress,
+        subject,
+        message,
+      })
+      .then((response) => {
+        setErrorMessage("");
+        setEmailSent(true);
+      })
+      .catch((error) => {
+        setEmailSent(false);
+        setErrorMessage(
+          "The email failed to send! Please edit your message and try again."
+        );
+      });
   };
 
   return (
@@ -69,6 +113,14 @@ export const Support = () => {
           </Row>
           <Row>
             <Button onClick={onSubmitButtonClick}>Submit</Button>
+          </Row>
+          <Row>
+            {errorMessage && (
+              <div className="error-message">{errorMessage}</div>
+            )}
+            {emailSent && (
+              <div className="success-message">Request sent successfully</div>
+            )}
           </Row>
         </Col>
       </Row>

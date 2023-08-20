@@ -9,3 +9,7 @@ export const isValidEmail = (email: string): boolean => {
       ) !== null
   );
 };
+
+export const IsStringNullOrEmpty = (value: string): boolean => {
+  return value === null || value === "";
+};
