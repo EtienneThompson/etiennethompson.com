@@ -10,39 +10,39 @@ export const Support = () => {
       <Row className="support-container" justify="center">
         <Col>
           <h1 className="section-title">GET IN TOUCH</h1>
-          <p>
+          <p className="text">
             Question or concerns about the Barbu Card Game app? Feel free to
             reach out, and I'll get back to you as soon as I can!
           </p>
           <Row>
             <Col cols="2" align="start">
               <div className="left-form-column">
-                <span>First Name</span>
+                <span className="text">First Name</span>
                 <TextInput />
               </div>
             </Col>
             <Col cols="2" align="start">
               <div className="right-form-column">
-                <span>Last Name</span>
+                <span className="text">Last Name</span>
                 <TextInput />
               </div>
             </Col>
           </Row>
           <Row>
             <Col align="start">
-              <span>Email</span>
+              <span className="text">Email</span>
               <TextInput />
             </Col>
           </Row>
           <Row>
             <Col align="start">
-              <span>Subject</span>
+              <span className="text">Subject</span>
               <TextInput />
             </Col>
           </Row>
           <Row>
             <Col align="start">
-              <span>Message</span>
+              <span className="text">Message</span>
               <TextArea />
             </Col>
           </Row>
