@@ -7,7 +7,7 @@ export const TextInput: React.FunctionComponent<TextInputTypes> = (
 ) => {
   return (
     <input
-      className="text-input"
+      className={`text-input ${props.className ?? ""}`}
       type="text"
       onChange={(e) => props.setter && props.setter(e.target.value)}
     />

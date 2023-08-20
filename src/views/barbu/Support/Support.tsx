@@ -4,6 +4,7 @@ import { Col, Container, Row } from "components/common/Grid";
 import { TextInput } from "components/common/Form/TextInput";
 import { TextArea } from "components/common/Form/TextArea";
 import { Button } from "components/common/Button";
+import { EmailInput } from "components/common/Form/EmailInput";
 
 export const Support = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -46,7 +47,7 @@ export const Support = () => {
           <Row>
             <Col align="start">
               <span className="text">Email</span>
-              <TextInput setter={(value: string) => setEmailAddress(value)} />
+              <EmailInput setter={(value: string) => setEmailAddress(value)} />
             </Col>
           </Row>
           <Row>
