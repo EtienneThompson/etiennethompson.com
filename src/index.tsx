@@ -7,6 +7,7 @@ import * as dotenv from "dotenv";
 import reportWebVitals from "./reportWebVitals";
 import { HomePage } from "views/HomePage";
 import { PrivacyPolicy } from "views/barbu/PrivacyPolicy";
+import { Support } from "views/barbu/Support/Support";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="" element={<HomePage />} />
           <Route path="barbu/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="barbu/contact-us" element={<Support />} />
         </Route>
       </Routes>
     </BrowserRouter>
