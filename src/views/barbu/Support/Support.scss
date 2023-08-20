@@ -1,0 +1,42 @@
+.support-container {
+    padding: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.section-title {
+    color: var(--secondary);
+}
+
+.left-form-column {
+    padding-right: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.right-form-column {
+    padding-left: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.error-message {
+    margin-top: 10px;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.success-message {
+    margin-top: 10px;
+    border: 1px solid green;
+    background-color: rgba(0, 255, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
