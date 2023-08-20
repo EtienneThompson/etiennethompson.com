@@ -1,15 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./index.scss";
 import App from "./App";
 import * as dotenv from "dotenv";
 import reportWebVitals from "./reportWebVitals";
+import { HomePage } from "views/HomePage";
+import { PrivacyPolicy } from "views/barbu/PrivacyPolicy";
 
 dotenv.config();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="" element={<HomePage />} />
+          <Route path="barbu/privacy-policy" element={<PrivacyPolicy />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
