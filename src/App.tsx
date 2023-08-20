@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import "./App.scss";
 
 import { Toolbar } from "./components/common/Toolbar";
 import { Footer } from "./components/common/Footer";
-import { AboutMe } from "./components/AboutMe";
-import { Banner } from "./components/Banner";
-import { Art } from "./components/Art";
-import { ProgrammingProjects } from "./components/ProgrammingProjects";
 
 // import visitsApi from "./api";
 
@@ -27,10 +24,8 @@ function App() {
   return (
     <div className="App">
       <Toolbar />
-      <Banner />
-      <AboutMe />
-      <Art />
-      <ProgrammingProjects />
+      <div style={{ paddingTop: "50px" }} />
+      <Outlet />
       <Footer />
     </div>
   );
