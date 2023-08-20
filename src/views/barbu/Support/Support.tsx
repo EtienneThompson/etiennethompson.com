@@ -5,6 +5,7 @@ import { TextInput } from "components/common/Form/TextInput";
 import { TextArea } from "components/common/Form/TextArea";
 import { Button } from "components/common/Button";
 import { EmailInput } from "components/common/Form/EmailInput";
+import { isValidEmail } from "utils";
 
 export const Support = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -19,6 +20,10 @@ export const Support = () => {
     console.log(emailAddress);
     console.log(subject);
     console.log(message);
+
+    if (!isValidEmail(emailAddress)) {
+      console.log("invalid email provided!");
+    }
   };
 
   return (

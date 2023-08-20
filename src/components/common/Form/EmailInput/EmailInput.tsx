@@ -1,6 +1,7 @@
 import React from "react";
 import { TextInput } from "../TextInput";
 import { EmailInputTypes } from "./EmailInput.types";
+import { isValidEmail } from "utils";
 
 export const EmailInput: React.FunctionComponent<EmailInputTypes> = (
   props: EmailInputTypes
@@ -9,12 +10,7 @@ export const EmailInput: React.FunctionComponent<EmailInputTypes> = (
 
   const validateEmail = (value: string) => {
     // validate the email here.
-    const emailMatches = value
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-    setHasError(emailMatches === null);
+    setHasError(!isValidEmail(value));
 
     if (props.setter) {
       props.setter(value);
