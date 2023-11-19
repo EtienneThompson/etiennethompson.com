@@ -31,12 +31,9 @@ export const AboutMe = () => {
             Chinese Language in May 2022. I'm also currently working on my
             Master's in Artificial Intelligence from Penn State University.
             <br />
-            <br /> In my free time I like to play trading card games. Right now
-            I mainly play the Commander format of Magic: the Gathering, but
-            I've played a few others as well. I started playing the Pokemon
-            Trading Card Game back in 2008 with my dad. I also like to draw!
-            I'm a self taught artist who likes colored pencil and normal pencil
-            medium drawings. You can check out my artwork below.
+            <br /> Outside of work, I like to work on other software projects,
+            play trading card games like Magic: the Gathering, and draw. You
+            can see some of my artwork and personal projects down below!
           </p>
         </div>
       </FadeInSection>
